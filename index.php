@@ -14,7 +14,6 @@ $currentPage = "game";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <?php include 'components/header.php'; ?>
@@ -164,31 +163,6 @@ $currentPage = "game";
             if (e.target === this) {
                 this.classList.remove('active');
             }
-        });
-
-        // Show welcome/disclaimer alert on page load
-        window.addEventListener('load', function() {
-            Swal.fire({
-                title: '<i class="bi bi-exclamation-triangle-fill" style="color: #f59e0b;"></i> Important Notice',
-                html: `
-                    <div style="text-align: left; font-size: 14px; line-height: 1.8;">
-                        <p><strong>BODMAS Master</strong> was developed as an assignment for <strong>Vaultboard Consulting Private Limited</strong>.</p>
-                        <br>
-                        <p>This game is the <strong>intellectual property of Md Ashif Rahman</strong>. Copying, reproducing, or using this content without permission may be subject to legal consequences.</p>
-                        <br>
-                        <p>If you're interested in collaborating or hiring, feel free to reach out:</p>
-                        <p><a href="https://arcode.netlify.app" target="_blank" style="color: #6366f1; font-weight: bold;"><i class="bi bi-link-45deg"></i> arcode.netlify.app</a></p>
-                    </div>
-                `,
-                icon: 'warning',
-                confirmButtonText: 'I Understand',
-                confirmButtonColor: '#6366f1',
-                allowOutsideClick: false,
-                customClass: {
-                    title: 'swal-title',
-                    htmlContainer: 'swal-html'
-                }
-            });
         });
     </script>
 </body>
